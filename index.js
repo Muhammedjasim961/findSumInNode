@@ -6,7 +6,9 @@ app.get("/", (req, res) => {
   res.send("Finding Sum");
 });
 app.get("/findsum", (req, res) => {
-  res.send("Need to implement");
+  const n1 = req.query.n1;
+  const n2 = req.query.n2;
+  res.send("Sum " + (n1 + n2));
 });
 
 app.listen(port, () => {
